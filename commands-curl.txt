@@ -1,0 +1,6 @@
+
+# post with transaction-token
+curl -i -X POST -H "Content-Type: application/json" -H "transaction-token: 92c835bf-f7fb-4393-a6fe-c47359d743ec" http://localhost:8080/items -d '{"name":"test","description":"test"}'
+
+# post without transaction-token (service must generate, with payload and minute instant)
+curl -i -X POST -H "Content-Type: application/json" http://localhost:8080/items -d '{"name":"test2","description":"test2"}'

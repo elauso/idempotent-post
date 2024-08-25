@@ -1,0 +1,11 @@
+services:
+  mysql:
+    container_name: 'item-mysql'
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=itemdb'
+      - 'MYSQL_PASSWORD=123'
+      - 'MYSQL_ROOT_PASSWORD=root'
+      - 'MYSQL_USER=user123'
+    ports:
+      - '3306:3306'
